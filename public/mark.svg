@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Comage mark">
+  <rect width="64" height="64" rx="14" fill="#9d1c20"/>
+  <path d="M14 40h36M14 32h36M14 24h36" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M16 44l8-26h6l-8 26zM30 44l8-26h6l-8 26z" fill="#ffffff"/>
+</svg>
