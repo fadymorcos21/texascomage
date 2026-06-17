@@ -6,7 +6,7 @@ import { Linkedin, Mail } from "lucide-react";
 export const metadata = {
   title: "Leadership",
   description:
-    "Meet the leadership of Comage Container Lines — decades of expertise in global freight forwarding, shipping and vessel management.",
+    "Meet the leadership of Comage Container Lines Texas Inc. — driving U.S. air and ocean cargo operations with decades of industry expertise.",
 };
 
 export default function Leadership() {
@@ -27,7 +27,7 @@ export default function Leadership() {
               <div className="overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 to-brand-800 shadow-card">
                 <div className="flex aspect-[3/4] items-end justify-center p-8">
                   <span className="font-display text-7xl font-extrabold text-white/90">
-                    JK
+                    DK
                   </span>
                 </div>
               </div>
@@ -49,39 +49,35 @@ export default function Leadership() {
             </Reveal>
 
             <Reveal direction="left">
-              <p className="eyebrow">Chairman &amp; CEO</p>
+              <p className="eyebrow">President</p>
               <h2 className="heading mt-2 text-3xl sm:text-4xl">
-                Joshua Kochath, C. Eng (Mech)
+                David Kochath
               </h2>
               <p className="mt-1 text-lg font-semibold text-brand-600">
-                Comage Container Lines
+                Comage Container Lines Texas Inc.
               </p>
               <div className="mt-6 space-y-4 leading-relaxed text-ink/70">
                 <p>
-                  Air and ocean cargo services are second nature to Joshua (Josh)
-                  Kochath, who has a wealth of experience in global transportation.
-                  Starting his career in vessel operations, Josh has nearly 30 years of
-                  experience in freight forwarding, shipping and vessel management. He
-                  has expanded his operations to meet the demands of clients who require
-                  both air freight and worldwide aviation supply services.
+                  Freight forwarding and global logistics have been a part of David
+                  Kochath's life from an early age. Learning firsthand from his father,
+                  Joshua (Josh) Kochath, David gained practical experience across air
+                  and ocean freight operations, supply chain management, and
+                  international transportation.
                 </p>
                 <p>
-                  Josh's specialized knowledge and comprehensive experience in the
-                  global transportation sector have served his clients extraordinarily
-                  well. Prior to founding Comage, he established Sower International, a
-                  successful marine surveying and consulting company, with offices across
-                  Canada and affiliates worldwide.
+                  Building on the foundation established by nearly three decades of
+                  industry leadership and global relationships, David has launched and
+                  expanded freight forwarding operations from Texas, serving clients
+                  with customized logistics solutions worldwide. His hands-on approach,
+                  industry knowledge, and commitment to customer service allow him to
+                  successfully manage complex transportation requirements across global
+                  markets.
                 </p>
                 <p>
-                  Josh's experience in the industry began with the Robert Lyon Group, a
-                  U.K.-based company, where he started as a marine surveyor and worked his
-                  way up the ranks, eventually becoming the company's president to oversee
-                  operations throughout Canada and the Middle East.
-                </p>
-                <p>
-                  Josh has a proven track record of accomplishments that demonstrates his
-                  keen knowledge of the logistics industry and the ability to successfully
-                  navigate global markets.
+                  By combining proven industry expertise with a modern approach to
+                  logistics, David continues the family tradition of delivering
+                  reliable, efficient, and cost-effective freight solutions for
+                  businesses around the world.
                 </p>
               </div>
             </Reveal>

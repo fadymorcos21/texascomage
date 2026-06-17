@@ -96,7 +96,7 @@ export default function Home() {
 
         {/* Stats strip */}
         <div className="absolute inset-x-0 bottom-0 z-10 border-t border-white/10 bg-[#04162d]/55 backdrop-blur">
-          <div className="container-x grid grid-cols-2 divide-x divide-white/10 lg:grid-cols-4">
+          <div className="container-x grid grid-cols-1 divide-x divide-white/10 sm:grid-cols-3">
             {stats.map((s) => (
               <div key={s.label} className="px-2 py-6 text-center lg:py-7">
                 <p className="font-display text-3xl font-extrabold text-white lg:text-4xl">
@@ -145,7 +145,7 @@ export default function Home() {
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-brand-600 p-6 text-white shadow-card sm:block">
-                <p className="font-display text-4xl font-extrabold">30+</p>
+                <p className="font-display text-4xl font-extrabold">20+</p>
                 <p className="text-sm text-white/80">years of global experience</p>
               </div>
             </div>
@@ -157,15 +157,15 @@ export default function Home() {
               A full-service approach to moving your cargo
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-ink/70">
-              Whether transporting air or ocean cargo, Comage Container Lines brings
-              global markets closer to you. We use our global resources to secure
-              optimum rates, services and carriers to and from ports in major trading
-              centres around the world.
+              Whether transporting air or ocean cargo, Comage Container Lines Texas
+              brings global markets closer to American businesses. We use a worldwide
+              network of partners to secure optimum rates, services and carriers — to
+              and from ports in major trading centres around the world.
             </p>
             <p className="mt-4 leading-relaxed text-ink/65">
-              With international offices across the U.S., Canada, China, Dubai,
-              Australia and the U.K., we are cross-trade specialists providing a full
-              range of services for all your air and ocean cargo shipments.
+              Based in Fresno, Texas, we are cross-trade specialists providing a full
+              range of air and ocean cargo services to importers and exporters across
+              the United States.
             </p>
             <div className="mt-7 grid gap-3 sm:grid-cols-2">
               {[

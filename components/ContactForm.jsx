@@ -1,19 +1,43 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle2, Loader2 } from "lucide-react";
+import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
+
+const initialForm = { name: "", email: "", subject: "", message: "", company: "" };
 
 export default function ContactForm() {
-  const [status, setStatus] = useState("idle"); // idle | sending | sent
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState("idle"); // idle | sending | sent | error
+  const [error, setError] = useState("");
+  const [form, setForm] = useState(initialForm);
 
   const update = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
     setStatus("sending");
-    // Front-end demo: simulate submission. Wire to an email service / API route later.
-    setTimeout(() => setStatus("sent"), 900);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        setError(
+          data?.error ||
+            "We couldn't send your message. Please try again or call our office."
+        );
+        setStatus("error");
+        return;
+      }
+      setStatus("sent");
+    } catch {
+      setError(
+        "Network error — please check your connection and try again."
+      );
+      setStatus("error");
+    }
   };
 
   if (status === "sent") {
@@ -22,13 +46,15 @@ export default function ContactForm() {
         <CheckCircle2 className="h-14 w-14 text-brand-600" />
         <h3 className="mt-4 font-display text-2xl font-bold text-ink">Message sent</h3>
         <p className="mt-2 max-w-sm text-ink/65">
-          Thank you, {form.name || "there"}. A member of the Comage team will respond to
-          you shortly — typically within 12–24 hours.
+          Thank you, {form.name || "there"}. A member of the Comage team will respond
+          to you shortly — typically within 12–24 hours. Check your inbox for a
+          confirmation.
         </p>
         <button
           onClick={() => {
-            setForm({ name: "", email: "", subject: "", message: "" });
+            setForm(initialForm);
             setStatus("idle");
+            setError("");
           }}
           className="btn-outline mt-6"
         >
@@ -39,12 +65,13 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={submit} className="space-y-5">
+    <form onSubmit={submit} className="space-y-5" noValidate>
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Your Name" required>
           <input
             required
             name="name"
+            autoComplete="name"
             value={form.name}
             onChange={update}
             className="field"
@@ -56,6 +83,7 @@ export default function ContactForm() {
             required
             type="email"
             name="email"
+            autoComplete="email"
             value={form.email}
             onChange={update}
             className="field"
@@ -83,6 +111,29 @@ export default function ContactForm() {
           placeholder="Tell us about your cargo, origin, destination and timeline…"
         />
       </Field>
+
+      {/* Honeypot — must stay empty. Hidden from real users + screen readers. */}
+      <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", top: "auto", width: "1px", height: "1px", overflow: "hidden" }}>
+        <label>
+          Company (leave blank)
+          <input
+            type="text"
+            name="company"
+            tabIndex={-1}
+            autoComplete="off"
+            value={form.company}
+            onChange={update}
+          />
+        </label>
+      </div>
+
+      {status === "error" && (
+        <div className="flex items-start gap-3 rounded-xl border border-brand-200 bg-brand-50 px-4 py-3 text-sm text-brand-800">
+          <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-brand-600" />
+          <p>{error}</p>
+        </div>
+      )}
+
       <button
         type="submit"
         disabled={status === "sending"}

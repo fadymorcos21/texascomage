@@ -10,7 +10,6 @@ const pageLinks = [
   { label: "About Us", href: "/about-us" },
   { label: "Accreditations", href: "/about-us/accreditations" },
   { label: "Testimonials", href: "/testimonials" },
-  { label: "Picture Gallery", href: "/picturegallery" },
   { label: "Leadership", href: "/leadership" },
   { label: "Resources", href: "/resources" },
   { label: "Trading Conditions", href: "/trading-conditions" },
@@ -38,7 +37,7 @@ export default function Footer() {
               clients a full range of shipping and logistical services.
             </p>
             <div className="mt-7 flex flex-wrap gap-2">
-              {["IATA", "FIATA", "FMC", "CIFFA", "NCBFAA"].map((a) => (
+              {["IATA", "FIATA", "FMC", "NCBFAA"].map((a) => (
                 <span
                   key={a}
                   className="rounded-md border border-white/15 px-2.5 py-1 text-xs font-semibold tracking-wide text-white/70"
@@ -66,7 +65,7 @@ export default function Footer() {
 
           <div className="lg:col-span-5">
             <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-white">
-              Our Offices
+              Our Office
             </h4>
             <div className="mt-5 grid gap-6 sm:grid-cols-2">
               {offices.map((o) => (

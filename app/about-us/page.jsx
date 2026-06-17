@@ -7,7 +7,7 @@ import { stats } from "@/lib/data";
 export const metadata = {
   title: "About Our Company",
   description:
-    "Comage Container Lines Texas Inc. — the U.S. operation bringing global markets closer with nearly three decades of international shipping experience.",
+    "Comage Container Lines Texas Inc. — the U.S. operation bringing global markets closer with more than two decades of international shipping experience.",
 };
 
 const blocks = [
@@ -17,7 +17,7 @@ const blocks = [
   },
   {
     title: "Investing in our clients",
-    body: "With nearly three decades of international experience in worldwide shipping services, Comage started as a non-vessel common carrier (NVOCC). With operations in North America, the company has expanded its offerings to include a full complement of ocean and air freight services. We invest in infrastructure, technology and resources to ensure service excellence.",
+    body: "With more than two decades of international experience in worldwide shipping services, Comage started as a non-vessel common carrier (NVOCC). Based in Texas, the company has expanded its offerings to include a full complement of ocean and air freight services for U.S. importers and exporters. We invest in infrastructure, technology and resources to ensure service excellence.",
   },
   {
     title: "The Comage advantage",
@@ -41,8 +41,8 @@ export default function About() {
           <Reveal direction="right">
             <div className="overflow-hidden rounded-3xl shadow-card">
               <Image
-                src="https://images.unsplash.com/photo-1493606278519-11aa9f86e40a?auto=format&fit=crop&w=1200&q=80"
-                alt="Cargo aircraft"
+                src="https://images.unsplash.com/photo-1542228262-3d663b306a53?auto=format&fit=crop&w=1200&q=80"
+                alt="Aerial view of a major port terminal"
                 width={1200}
                 height={900}
                 className="h-[500px] w-full object-cover"
@@ -86,7 +86,7 @@ export default function About() {
       </section>
 
       <section className="bg-ink">
-        <div className="container-x grid grid-cols-2 divide-x divide-white/10 py-12 lg:grid-cols-4">
+        <div className="container-x grid grid-cols-1 divide-x divide-white/10 py-12 sm:grid-cols-3">
           {stats.map((s) => (
             <Reveal key={s.label} className="px-3 text-center">
               <p className="font-display text-4xl font-extrabold text-white">{s.value}</p>
