@@ -27,9 +27,9 @@ export default function Contact() {
             <p className="eyebrow">Send us a message</p>
             <h2 className="heading mt-3 text-3xl">We'll respond promptly</h2>
             <p className="mt-3 leading-relaxed text-ink/65">
-              Complete the form below to receive a timely response from Comage Container
-              Lines — typically within 12 hours for air freight and 24 hours for ocean
-              freight inquiries.
+              Complete the form below to receive a timely response from Comage
+              Container Lines — typically within 12 hours for air freight and 24
+              hours for ocean freight inquiries.
             </p>
             <div className="mt-8 rounded-3xl border border-ink/[0.06] bg-white p-7 shadow-soft sm:p-9">
               <ContactForm />
@@ -37,8 +37,8 @@ export default function Contact() {
           </Reveal>
 
           <Reveal direction="left">
-            <p className="eyebrow">Our offices</p>
-            <h2 className="heading mt-3 text-3xl">Worldwide locations</h2>
+            <p className="eyebrow">Our office</p>
+            <h2 className="heading mt-3 text-3xl">Location</h2>
             <div className="mt-8 space-y-5">
               {offices.map((o) => (
                 <div
