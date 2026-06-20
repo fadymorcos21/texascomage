@@ -41,11 +41,12 @@ export default function About() {
           <Reveal direction="right">
             <div className="overflow-hidden rounded-3xl shadow-card">
               <Image
-                src="https://images.unsplash.com/photo-1542228262-3d663b306a53?auto=format&fit=crop&w=1200&q=80"
-                alt="Aerial view of a major port terminal"
-                width={1200}
-                height={900}
+                src="/stock5.png"
+                alt="Comage Container Lines — global shipping operations"
+                width={1448}
+                height={1086}
                 className="h-[500px] w-full object-cover"
+                priority
               />
             </div>
           </Reveal>
